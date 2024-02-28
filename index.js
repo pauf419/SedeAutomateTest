@@ -20,7 +20,8 @@ const uas = [
     "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.64 Mobile Safari/537.36"
 ]
 
-const req_data = { 
+const forms = [
+  { 
     locality: "/icpplus/citar?p=2&locale=es", 
     office: "2",
     policia_tramites: '4112', 
@@ -28,20 +29,48 @@ const req_data = {
     pnm: "653615024", 
     email: "lina.keratina@gmail.com",
     citado: "KATERINA SOLODA"  
-}      
+  }, 
+  {
+    locality: "/icpplus/citar?p=33&locale=es",
+    office: "4", 
+    policia_tramites: "4112",
+    nie: "Z0563935A", 
+    pnm: "653615024", 
+    email: "lina.keratina@gmail.com",
+    citado: "KATERINA SOLODA"  
+  },
+  {
+    locality: "/icpplus/citar?p=5&locale=es",
+    office: "2",
+    policia_tramites: "4112",
+    nie: "Z0563935A", 
+    pnm: "653615024", 
+    email: "lina.keratina@gmail.com",
+    citado: "KATERINA SOLODA"  
+  }, 
+  {
+    locality: "/icpplus/citar?p=6&locale=es",
+    office: "2",
+    policia_tramites: "4112",
+    nie: "Z0563935A", 
+    pnm: "653615024", 
+    email: "lina.keratina@gmail.com",
+    citado: "KATERINA SOLODA"  
+  }
+]    
  
 
 const ethDebug = (eth) => {  
     console.log(`
-        \nEth${eth} - P -
+        \nEth${eth} - P - 
     `) 
 }   
 
 const randomTimeout = () => {  
-  return Math.floor(Math.random() * 300) + 1000 
+  return Math.floor(Math.random() * 3000) + 1000
 } 
     
-const PROXY_INDEX = 29
+const PROXY_INDEX = 72
  
 const getProxySysPth = (proxy, loc = false) => {
   return `${__dirname}/pdata/${proxy.replace(":", "_")}.${loc ? "ls" : "cookie"}` 
@@ -58,28 +87,28 @@ const getProxy = async () => {
 }
 
 
-const getProxyConfig = async (sysPthCookie, sysPthLS) => {
+const getProxyConfig = async (sysPthCookie, sysPthLS = null) => {
   return await new Promise(async (root) => {
     const cookie = await new Promise(async (resolve, _) =>  
     {   
         fs.readFile(sysPthCookie, 'utf8', (e, d) => {
             if(e) return resolve([])
-            const spl = d.split("|Mo") 
+            const spl = d.split("(|)") 
             const p = JSON.parse(spl[0])    
 
             return resolve({
-              cookies: p, 
+              cookies: p,  
               ua: spl[1]
             })     
         })     
     })
-    const ls = await new Promise(async (resolve, _) => {
+    const ls = sysPthLS ? await new Promise(async (resolve, _) => {
       fs.readFile(sysPthLS, 'utf8', (e, d) => {
         if(e) return resolve([])
         const p = JSON.parse(d)   
         return resolve(p)     
       }) 
-    })
+    }) : []
     return root({
       ...cookie, 
       ls
@@ -90,25 +119,25 @@ const getProxyConfig = async (sysPthCookie, sysPthLS) => {
 const setupProxy = async (proxy) => {
   const sysPthCookie = getProxySysPth(proxy)
   const sysPthLS = getProxySysPth(proxy, true)
-  if(fs.existsSync(sysPthCookie)) return {
+  if(fs.existsSync(sysPthCookie)) return { 
     ...await getProxyConfig(sysPthCookie, sysPthLS)
   }  
 
   const ua = uas[Math.floor(Math.random()*uas.length)]
 
-  fs.writeFileSync(sysPthCookie, `[]|${ua}`) 
+  fs.writeFileSync(sysPthCookie, `[](|)${ua}`) 
   fs.writeFileSync(sysPthLS, "[]")
   return {  
     cookies: [], 
     ua,
-    ls: []
+    ls: [] 
   }  
 }
 
-const writeProxyCookies = (cks, proxy) => {
+const writeProxyCookies = async (cks, proxy) => {
   const sysPth = getProxySysPth(proxy) 
-  const {ua} = getProxyConfig(sysPth) 
-  fs.writeFileSync(sysPth, JSON.stringify(cks)+"|"+ua) 
+  const {ua} = await getProxyConfig(sysPth) 
+  fs.writeFileSync(sysPth, JSON.stringify(cks)+"(|)"+ua) 
 }
 
 const writeProxyLS = (ls, proxy) => {
@@ -158,7 +187,7 @@ const BOOTSTRAP = async () => {
 
     const {cookies, ua} = await setupProxy(pr)  
         
-    const browser = await puppeteer.launch({     
+    const browser = await puppeteer.launch({      
         slowMo: 10, 
         headless: false, 
         executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", 
@@ -167,9 +196,11 @@ const BOOTSTRAP = async () => {
             `--proxy-server=${pr}`,   
             `--disable-extensions-except=${extSysPth}`,
             `--load-extension=${extSysPth}`,
-        ], 
-    })  
+        ],  
+    })   
     const page = await browser.newPage();  
+
+    await page.authenticate({'username':"xrtldjpj",'password':"lmkbi0mchm4j"})
      
     console.log(`\n COOKIE SIZE: ${cookies.length}\nUSING PROXY: ${pr}`)
  
@@ -177,47 +208,44 @@ const BOOTSTRAP = async () => {
 
     await page.setExtraHTTPHeaders({
       "User-Agent": ua, 
-      "sec-ch-ua": 'Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121',
-      "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
       "Accept-Encoding": "gzip, deflate, br, zstd",
     })  
 
-    await page.goto(`https://icp.administracionelectronica.gob.es/icpplus/index.html`, { waitUntil: 'networkidle2' })
- 
-    await page.waitForTimeout(3200)
-    await page.reload() 
+    const req_data = forms[Math.floor(Math.random()*forms.length)]
 
-    await page.waitForSelector("#form")    
+    await page.goto(`https://icp.administracionelectronica.gob.es/icpplus/index.html`, { waitUntil: 'networkidle2' })
+
+    /*await page.waitForSelector("#form")    
      
-    await page.waitForTimeout(2200) 
+    await page.waitForTimeout(randomTimeout()) 
     
     await page.select("#form", req_data.locality)  
     
-    await page.waitForTimeout(2200)  
+    await page.waitForTimeout(randomTimeout())  
 
     await Promise.all([page.click("#btnAceptar"), page.waitForNavigation({waitUntil:'networkidle2'})])
     ethDebug(1) 
 
     await page.waitForSelector("#sede")
 
-    await page.waitForTimeout(2200) 
+    await page.waitForTimeout(randomTimeout()) 
 
-    await Promise.all([page.select("#sede", "2"), page.waitForNavigation({waitUntil:'networkidle2'})])
+    await Promise.all([page.select("#sede", req_data.office), page.waitForNavigation({waitUntil:'networkidle2'})])
     ethDebug(2) 
 
     await page.waitForSelector(".mf-input__l")
     await page.waitForSelector("#btnAceptar")
 
-    await page.select(".mf-input__l", "4112")
+    await page.select(".mf-input__l", req_data.policia_tramites)
  
-    await page.waitForTimeout(2200)
+    await page.waitForTimeout(randomTimeout())
 
     await Promise.all([page.click("#btnAceptar"), page.waitForNavigation({waitUntil:'networkidle2'})])
     ethDebug(3)
 
     await page.waitForSelector("#btnEntrar")
 
-    await page.waitForTimeout(2200)  
+    await page.waitForTimeout(randomTimeout())  
 
     await page.click("#btnEntrar")
 
@@ -227,36 +255,36 @@ const BOOTSTRAP = async () => {
 
     await page.type("#txtIdCitado", req_data.nie) 
 
-    await page.waitForTimeout(2200) 
+    await page.waitForTimeout(randomTimeout()) 
 
     await page.type("#txtDesCitado", req_data.citado)
 
-    await page.waitForTimeout(2200)
+    await page.waitForTimeout(randomTimeout())
 
     await Promise.all([page.click("#btnEnviar"), page.waitForNavigation({waitUntil:'networkidle2'})])
     ethDebug(4)
 
     await page.waitForSelector("#btnEnviar")
 
-    await page.waitForTimeout(2200) 
+    await page.waitForTimeout(randomTimeout()) 
 
     await Promise.all([page.click("#btnEnviar"), page.waitForNavigation({waitUntil:'networkidle2'})])
 
     await page.waitForSelector("#txtTelefonoCitado")
 
-    await page.waitForTimeout(2200)  
+    await page.waitForTimeout(randomTimeout())  
 
     await page.type("#txtTelefonoCitado", req_data.pnm)
     await page.type("#emailUNO", req_data.email)
     await page.type("#emailDOS", req_data.email) 
 
-    await page.waitForTimeout(2200)  
+    await page.waitForTimeout(randomTimeout())  
 
     await Promise.all([page.click("#btnSiguiente"), page.waitForNavigation({waitUntil:'domcontentloaded'})])  
 
     await page.waitForSelector("#btnSiguiente")
     await page.waitForSelector("#cita1")
-    ethDebug(5)
+    ethDebug(5) 
     
 
     try {
@@ -293,7 +321,7 @@ const BOOTSTRAP = async () => {
     const cks = await page.cookies()  
 
     writeProxyCookies(cks, pr)
-    ethDebug(5) 
+    ethDebug(5) */
   } catch(e) {
 
   }

@@ -1,241 +1,243 @@
-module.exports = [
-    {
-      name: 'TSf1e2d148077',
-      value: '083a28b6b8ab2800f06bd1bee72532b7ee81a19daba4a19745f145ea36756741c20295c38e028a8e33d973bc6b6af644086cd06856172000f1e16aa35865b71989e7046ab39d299ea01c85cc4530f356a0bd09bf378dfe52',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 189,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TSf1e2d148029',
-      value: '083a28b6b8ab2800b5ac07d1307889365fd5884ce74bee026b38aac7f0f6f5de6fceb2180f444145f28a501cce63f00d',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: 1707836912.214406,
-      size: 109,
-      httpOnly: false,
-      secure: false,
-      session: false,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TSb5dce861027',
-      value: '083a28b6b8ab2000b7119d7e1e2c0ab125b6d19ab931ab2ea28e96755eaeafae84795d8a3d11122a08efed0070113000f89ea335f8ec7e7f1768c68171ca7b79261d2f397c26e0ae14fea50896622c6963a38e2d1134b7e1d80eb4152bb96878',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 205,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure', 
-      sourcePort: 443
-    },
-    {
-      name: '__utmb',
-      value: '129963284.3.10.1707836869',
-      domain: '.icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: 1707838677,
-      size: 31,
-      httpOnly: false,
-      secure: false,
-      session: false,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TSPD_101_DID',
-      value: '083a28b6b8ab2800e8d0c6d2e89b29adde531d48a59a9bb95a51763163aa5994a43a257c27c1b0798363b66b608892e7088666d4b706380056ce507bd1fa4b82bb7d43fea4536277d4831df71385671445fd5dc7b3c9b112be41c43cbe28eb57af859187c5ad028ede2752526c46813f',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 236,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: '__utmt',
-      value: '1',
-      domain: '.icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: 1707837469,
-      size: 7,
-      httpOnly: false,
-      secure: false,
-      session: false,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TS00000000076',
-      value: '083a28b6b8ab2800e8d0c6d2e89b29adde531d48a59a9bb95a51763163aa5994a43a257c27c1b0798363b66b608892e7088666d4b709d00038eadb27d2d380a081d2fd43ceaf09774015d7f2f276275fcb1d543c508d30cd4eece23af51b323970fce005072d9bb8ec937957dc25dd4989934942114215d9a938b95929ef67cc672f23765ef366fa297475d7d39a6b90257b39d7f13104be79c2545a819d1face56dce6f59c99f75a64d79a98d1e4129d14a3bcca3ad925fb67db2aacd48efd70376e964b7c4befd835e2a65e315a1aa0171d9c561a25026a2a74d86c3288987b0c62d14b4db9e88c9ec520a4bfa7a9b848400cbe8131489d8807f8b115fd700a513b66e6fd902e1',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 541,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TSPD_101',
-      value: '083a28b6b8ab2800bc882c9fc786c583e911cf41c9d6d051025e831c9fd6651a858b7c028e5f9b1945316863f280dcf00815e5140d051800f027204a7d60fa6d72b2ab1b0f4bdd01d9ba1ca193434d91',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 168,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'dtCookie',
-      value: 'v_4_srv_3_sn_B7EEE35ABF64FE5E306F73BB106CEA37_perc_100000_ol_0_mul_1_app-3Afc0be45c7c7075ff_0',
-      domain: '.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 101,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: '__utma',
-      value: '129963284.367752792.1707836869.1707836869.1707836869.1',
-      domain: '.icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: 1742396877.93169,
-      size: 60,
-      httpOnly: false,
-      secure: false,
-      session: false,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TS01df4168',
-      value: '01a3cd4c04964505bcd61de9a6712a4bd4d6066e01bda824ba668b1bc31a44808a7fbaa6848f7391fd1fcf63feab2665c38c183fd50ccd757ad4e827767ff1659df097f290',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/icpplus',
-      expires: -1,
-      size: 148,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: '__utmz',
-      value: '129963284.1707836869.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
-      domain: '.icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: 1723604877,
-      size: 76,
-      httpOnly: false,
-      secure: false,
-      session: false,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TSf1e2d148078',
-      value: '083a28b6b8ab20003fb448cd671786f70b541dddf792fec7630d60aa71ce0be599d3493afb8ca7c008aa56c2c1182801c739246f4a62f7c02a86ada5568d8af31fc3181955ced86409002e116ef89796f0e5eab263798ee63a56627818ac858824eb64027b90a212dbacfcfde24c49aa62433cea87077b5297d79c93bc67dad09df5270de37f5bf223481c25a858655110d2e3cdaf0e68f947e3cd4ec85c525d35d8847ef88e0e6c6d4ccdb1334660faf239390bfcb3f8d8b96861b513f532338522dfe83d43338eadee7fee3bf8c5282cd59defd06361f54186500e96c3b518641b2966c746735ac718784bf7c82592dde1dbfd6b484f1851312b731ac491dcb8347deb8368f4eb36cc45ec10e4ad7ea52af4efd689d8e74fb44cecc0e542166b7a0a18748cfa327b932b622dd483f33d3933a38fc1e38fc9e52ae584f00423e79508ce7e1719420f0d866b97911021929a9c532732b578',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: 1707836893.319525,
-      size: 701,
-      httpOnly: false,
-      secure: false,
-      session: false,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: '__utmc',
-      value: '129963284',
-      domain: '.icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 15,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'TS01629f81',
-      value: '01a3cd4c047130b30b511537b9fcff168c32d7cdf6bda824ba668b1bc31a44808a7fbaa684cbf5b7be2f9f8d8316b84c8bfddf57e11fdd1166b708207c2bd3222fd1cacade2c3ff8246c5f197a51633609e126735f80d597dc108cffe0dca1ab0faaea22de',
-      domain: '.icp.administracionelectronica.gob.es',
-      path: '/',
-      expires: -1,
-      size: 212,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'f5_cspm',
-      value: '1234',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/icpplus',
-      expires: -1,
-      size: 11,
-      httpOnly: false,
-      secure: false,
-      session: true,
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    },
-    {
-      name: 'JSESSIONID',
-      value: '216D05F1198EEB1E76A59A6027819D21.appdmzgal3_19023_icpplus',
-      domain: 'icp.administracionelectronica.gob.es',
-      path: '/icpplus',
-      expires: -1,
-      size: 67,
-      httpOnly: true,
-      secure: true,
-      session: true,
-      sameSite: 'None',
-      sameParty: false,
-      sourceScheme: 'Secure',
-      sourcePort: 443
-    }
-  ]
+const puppeteer = require('puppeteer-extra') 
+const pluginStealth = require('puppeteer-extra-plugin-stealth') 
+const fs = require('fs')
+const axios = require("axios")
+
+const uas = [
+    "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+    "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Vivaldi/6.5.3206.63",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Vivaldi/6.5.3206.63",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.2277.112",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/122.0.6261.62 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (iPad; CPU OS 17_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/122.0.6261.62 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (iPod; CPU iPhone OS 17_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/122.0.6261.62 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.64 Mobile Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.64 Mobile Safari/537.36"
+]
+ 
+const ethDebug = (eth) => {  
+    console.log(`
+        \nEth${eth} - P -
+    `) 
+}   
+
+const randomTimeout = () => {  
+  return Math.floor(Math.random() * 300) + 1000 
+} 
+    
+const PROXY_INDEX = 29
+ 
+const getProxySysPth = (proxy, loc = false) => {
+  return `${__dirname}/pdata/${proxy.replace(":", "_")}.${loc ? "ls" : "cookie"}` 
+}
+
+
+const getProxy = async () => {  
+    return await new Promise(async (resolve, reject) =>  
+    {   
+        fs.readFile(__dirname + "/webshare.txt", 'utf8', (e, d) => {
+            return resolve(d.replaceAll("\r", "").split("\n")[PROXY_INDEX])     
+        })   
+    })      
+}
+
+
+const getProxyConfig = async (sysPthCookie, sysPthLS) => {
+  return await new Promise(async (root) => {
+    const cookie = await new Promise(async (resolve, _) =>  
+    {   
+        fs.readFile(sysPthCookie, 'utf8', (e, d) => {
+            if(e) return resolve([])
+            const spl = d.split("|Mo") 
+            const p = JSON.parse(spl[0])    
+
+            return resolve({
+              cookies: p, 
+              ua: spl[1]
+            })     
+        })     
+    })
+    const ls = await new Promise(async (resolve, _) => {
+      fs.readFile(sysPthLS, 'utf8', (e, d) => {
+        if(e) return resolve([])
+        const p = JSON.parse(d)   
+        return resolve(p)     
+      }) 
+    })
+    return root({
+      ...cookie, 
+      ls
+    })
+  }) 
+}
+
+const setupProxy = async (proxy) => {
+  const sysPthCookie = getProxySysPth(proxy)
+  const sysPthLS = getProxySysPth(proxy, true)
+  if(fs.existsSync(sysPthCookie)) return {
+    ...await getProxyConfig(sysPthCookie, sysPthLS)
+  }  
+
+  const ua = uas[Math.floor(Math.random()*uas.length)]
+
+  fs.writeFileSync(sysPthCookie, `[]|${ua}`) 
+  fs.writeFileSync(sysPthLS, "[]")
+  return {  
+    cookies: [], 
+    ua,
+    ls: []
+  }  
+}
+
+const writeProxyCookies = (cks, proxy) => {
+  const sysPth = getProxySysPth(proxy) 
+  const {ua} = getProxyConfig(sysPth) 
+  fs.writeFileSync(sysPth, JSON.stringify(cks)+"|"+ua) 
+}
+
+const writeProxyLS = (ls, proxy) => {
+  const sysPthLS = getProxySysPth(proxy, true)
+  fs.writeFileSync(sysPthLS, JSON.stringify(ls))
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+
+const solveCaptcha = async (fname) => {
+
+  const filePath = `${__dirname}/${fname}`;
+
+  const formData = new FormData();
+  
+  const fileData = fs.readFileSync(filePath);
+  
+  const blob = new Blob([fileData]); 
+  
+  formData.append('file', blob, '${fname}');
+  
+  formData.append('key', '8hqpcfc2nbrg7ywzltgt3knvqrdzwbdk');
+  formData.append('method', 'post'); 
+   
+  const captchaId = await axios.post("http://azcaptcha.com/in.php", formData)
+  const id = captchaId.data.split("|")[1]
+  await sleep(4000)
+  const solve = await axios.get(`http://azcaptcha.com/res.php?key=8hqpcfc2nbrg7ywzltgt3knvqrdzwbdk&action=get&id=${id}`)
+  return solve.data.split("|")[1]
+
+}
+
+const req_data = { 
+  locality: "/icpplus/citar?p=2&locale=es", 
+  office: "2",
+  policia_tramites: '4112', 
+  nie: "Z0563935A", 
+  pnm: "653615024", 
+  email: "lina.keratina@gmail.com",
+  citado: "KATERINA SOLODA"  
+}      
+
+const BookAppointment = async () => { 
+  puppeteer.use(pluginStealth())      
+
+  const proxy = await getProxy()
+
+  const {cookies, userAgent} = await setupProxy(proxy)  
+      
+  const browser = await puppeteer.launch({     
+      slowMo: 10, 
+      headless: false, 
+      args: [  
+          `--start-maximized`, 
+          `--proxy-server=${proxy}`,   
+      ], 
+  })  
+  const page = await browser.newPage();  
+
+  await page.setCookie(...cookies)   
+
+  await page.setExtraHTTPHeaders({
+    "User-Agent": userAgent, 
+  })  
+
+  await page.goto(`https://icp.administracionelectronica.gob.es/icpplus/index.html`, { waitUntil: 'networkidle2' })
+
+  await page.waitForSelector("#form")    
+  await page.waitForTimeout(2200) 
+  await page.select("#form", "/icpplus/citar?p=2&locale=es")  
+  await page.waitForTimeout(2200)  
+  await Promise.all([page.click("#btnAceptar"), page.waitForNavigation({waitUntil:'networkidle2'})])
+
+  await page.waitForSelector("#sede")
+  await page.waitForTimeout(2200) 
+  await Promise.all([page.select("#sede", "2"), page.waitForNavigation({waitUntil:'networkidle2'})])
+
+  await page.waitForSelector(".mf-input__l")
+  await page.waitForSelector("#btnAceptar")
+  await page.select(".mf-input__l", "4112")
+  await page.waitForTimeout(2200)
+  await Promise.all([page.click("#btnAceptar"), page.waitForNavigation({waitUntil:'networkidle2'})])
+
+  await page.waitForSelector("#btnEntrar")
+  await page.waitForTimeout(2200)  
+  await page.click("#btnEntrar")
+  await page.waitForSelector("#txtIdCitado")
+  await page.waitForSelector("#txtDesCitado")
+  await page.waitForSelector("#btnEnviar")
+  await page.type("#txtIdCitado", "Z0563935A") 
+  await page.waitForTimeout(2200) 
+  await page.type("#txtDesCitado", "KATERINA SOLODA" )
+  await page.waitForTimeout(2200)
+  await Promise.all([page.click("#btnEnviar"), page.waitForNavigation({waitUntil:'networkidle2'})])
+
+  await page.waitForSelector("#btnEnviar")
+  await page.waitForTimeout(2200) 
+
+  await Promise.all([page.click("#btnEnviar"), page.waitForNavigation({waitUntil:'networkidle2'})])
+
+  await page.waitForSelector("#txtTelefonoCitado")
+  await page.waitForTimeout(2200)  
+  await page.type("#txtTelefonoCitado", "653615024")
+  await page.type("#emailUNO", "lina.keratina@gmail.com")
+  await page.type("#emailDOS", "lina.keratina@gmail.com") 
+  await page.waitForTimeout(2200)  
+  await Promise.all([page.click("#btnSiguiente"), page.waitForNavigation({waitUntil:'domcontentloaded'})])  
+
+  await page.waitForSelector("#btnSiguiente")
+  await page.waitForSelector("#cita1")
+  
+
+  try {
+    const element = await page.waitForSelector(".img-thumbnail", {timeout: 5000}) 
+    await page.waitForTimeout(randomTimeout()) 
+    await element.screenshot({ 
+      path: `post_image_1.jpg`  
+    })
+    const key = await solveCaptcha(`post_image_1.jpg`)
+    await page.type("#captcha", key)
+  } catch(e) {
+    console.log(e)
+  }
+
+  await page.click("#cita1")
+  await page.click("#btnSiguiente")
+  await page.waitForTimeout(2000)
+  await page.waitForSelector(".btn")
+  await page.click(".btn")
+  await page.waitForTimeout(10000)
+  await Promise.all([page.goto("https://icp.administracionelectronica.gob.es/icpplus/index.html"), page.waitForNavigation({waitUntil:'domcontentloaded'})]) 
+  
+  
+  const pageCookies = await page.cookies()  
+
+
+  writeProxyCookies(pageCookies, proxy)
+}
